@@ -1,0 +1,13 @@
+{
+    body    => \'index.tmpl',
+    title => 'Comments page - Example Site',
+    breadcrumbs => {
+        text_re    => qr/([^-]+)/,
+        
+        replace => {
+            qr/^\s+/ => '',
+            qr/\s+$/ => '',
+        }
+    },
+    plugins => [ qw/BreadCrumbs/ ]
+},

@@ -1,0 +1,73 @@
+App-ZofCMS-Plugin-BreadCrumbs
+
+=head1 DESCRIPTION
+
+The module is a plugin for L<App::ZofCMS>. It provides means to add
+a "breadcrumbs" (L<http://en.wikipedia.org/wiki/Breadcrumb_(navigation)>)
+to your pages.
+
+This documentation assumes you've read L<App::ZofCMS>,
+L<App::ZofCMS::Config> and L<App::ZofCMS::Template>
+
+=head1 HOW DOES IT WORK
+
+The plugin automagically generates breadcrumb links, if your sites are
+relatively simple and pages are in good hierarchy the plugin will do
+the Right Thing(tm) most of the time. The links for breadcrumbs are
+determined as follows. If the page is not called C<index> then the
+C<index> page in the current "directory" will be added to the breadcrumbs,
+the "path" will be broken down to pieces and C<index> page in each piece
+will be added to the breadcrumbs. B<Note:> the examples below assume
+that the C<no_pages> argument was not specified:
+
+    # page
+    index.pl?page=/foo/bar/baz
+
+    # crumbs
+    /index => /foo/index => /foo/bar/index => /foo/bar/baz
+
+
+    # page
+    index.pl?page=/foo/bar/beer/index
+
+    # crumbs
+    /index => /foo/index/ => /foo/bar/index => /foo/bar/beer/index
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Build.PL
+	./Build
+	./Build test
+	./Build install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc App::ZofCMS::Plugin::BreadCrumbs
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-ZofCMS-Plugin-BreadCrumbs
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/App-ZofCMS-Plugin-BreadCrumbs
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/App-ZofCMS-Plugin-BreadCrumbs
+
+    Search CPAN
+        http://search.cpan.org/dist/App-ZofCMS-Plugin-BreadCrumbs
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2008 Zoffix Znet
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
