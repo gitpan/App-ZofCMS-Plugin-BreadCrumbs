@@ -10,6 +10,9 @@ my $builder = Module::Build->new(
     build_requires => {
         'Test::More' => 0,
     },
+    build_recommends => {
+        'App::ZofCMS::Test::Plugin' => 0.0104,
+    },
     requires => {
         'HTML::Template'        => 2.9,
         'File::Spec::Functions' => 3.2701,

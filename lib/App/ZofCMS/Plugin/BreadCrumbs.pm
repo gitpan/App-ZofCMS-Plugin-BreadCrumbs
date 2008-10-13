@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::BreadCrumbs;
 use warnings;
 use strict;
 
-our $VERSION = '0.0101';
+our $VERSION = '0.0102';
 use HTML::Template;
 use File::Spec::Functions qw/catfile splitdir/;
 

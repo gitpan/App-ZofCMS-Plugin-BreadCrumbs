@@ -5,9 +5,10 @@ use warnings;
 
 use Test::More;
 
-eval "use App::ZofCMS::Test::Plugin;";
+my $min_version = '0.0104';
+eval "use App::ZofCMS::Test::Plugin $min_version;";
 plan skip_all
-=> "App::ZofCMS::Test::Plugin required for testing plugin"
+=> "App::ZofCMS::Test::Plugin $min_version required for testing plugin"
     if $@;
 
 plugin_ok(

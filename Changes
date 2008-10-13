@@ -1,5 +1,8 @@
 Revision history for App-ZofCMS-Plugin-BreadCrumbs
 
+0.0102  October 12, 2008
+        Fixed broken test suit
+
 0.0101  August 12, 2008
         First version, released on an unsuspecting world.
 
