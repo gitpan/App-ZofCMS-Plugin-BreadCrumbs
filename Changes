@@ -1,5 +1,8 @@
 Revision history for App-ZofCMS-Plugin-BreadCrumbs
 
+0.0103  July 12, 2008
+        Added option to specify config in Main Config File
+
 0.0102  October 12, 2008
         Fixed broken test suit
 

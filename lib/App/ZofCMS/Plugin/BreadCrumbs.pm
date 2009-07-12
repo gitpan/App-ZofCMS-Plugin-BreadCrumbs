@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::BreadCrumbs;
 use warnings;
 use strict;
 
-our $VERSION = '0.0102';
+our $VERSION = '0.0103';
 use HTML::Template;
 use File::Spec::Functions qw/catfile splitdir/;
 
@@ -13,6 +13,8 @@ sub process {
     my ( $self, $template, $query, $config ) = @_;
 
     my $bread_conf = delete $template->{breadcrumbs};
+    $bread_conf = delete $config->conf->{breadcrumbs}
+        unless defined $bread_conf;
 
     return
         if ref $bread_conf eq 'HASH'
@@ -202,7 +204,9 @@ the C<breadcrumbs> key (see below) is not necessary.
     },
 
 The C<breadcrumbs> first-level ZofCMS template key controls the behaviour
-of the plugin. The key takes a hashref as a value.
+of the plugin. Can be specified as the first-level key in Main Config File, but unlike many
+other plugins the hashref keys do NOT merge; i.e. if you set the key in both files, the value
+in ZofCMS Template will take precedence. The key takes a hashref as a value.
 Do B<NOT> specify this key if you wish to use all the
 defaults, as specifying an I<empty hashref> as a value will B<disable> the
 plugin for that given page. Possible keys/values of that hashref are as

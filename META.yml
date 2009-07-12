@@ -1,6 +1,6 @@
 ---
 name: App-ZofCMS-Plugin-BreadCrumbs
-version: 0.0102
+version: 0.0103
 author:
   - 'Zoffix Znet <zoffix@cpan.org>'
 abstract: add "breadcrumbs" navigation to your sites
@@ -15,8 +15,8 @@ build_requires:
 provides:
   App::ZofCMS::Plugin::BreadCrumbs:
     file: lib/App/ZofCMS/Plugin/BreadCrumbs.pm
-    version: 0.0102
-generated_by: Module::Build version 0.2808
+    version: 0.0103
+generated_by: Module::Build version 0.280801
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2
