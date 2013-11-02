@@ -16,7 +16,9 @@ my $builder = Module::Build->new(
     requires => {
         'HTML::Template'        => 2.9,
         'File::Spec::Functions' => 3.2701,
+        perl                    => 5.006,
     },
+    configure_requires => { 'Module::Build' => 0 },
     add_to_cleanup      => [ 'App-ZofCMS-Plugin-BreadCrumbs-*' ],
     create_makefile_pl => 'traditional',
 );

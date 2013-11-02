@@ -3,9 +3,9 @@ package App::ZofCMS::Plugin::BreadCrumbs;
 use warnings;
 use strict;
 
-our $VERSION = '0.0103';
+our $VERSION = '0.0104';
 use HTML::Template;
-use File::Spec::Functions qw/catfile splitdir/;
+use File::Spec::Functions (qw/catfile splitdir/);
 
 sub new { bless {}, shift }
 
@@ -124,6 +124,8 @@ END_TEMPLATE
 
 1;
 __END__
+
+=encoding utf8
 
 =head1 NAME
 
